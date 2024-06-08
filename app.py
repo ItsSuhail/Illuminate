@@ -2,7 +2,7 @@ from flask import Flask, render_template, session, request, redirect
 from cs50 import SQL
 from flask_session import Session
 from tempfile import mkdtemp
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import login_required, apology
 
@@ -22,7 +22,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 @app.route('/')
-@login_required
+# @login_required
 def index():
     return render_template('index.html')
 
@@ -61,6 +61,35 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template('login.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    '''Register user'''
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        confirmation = request.form.get('confirmation')
+
+        if not username:
+            return render_template('apology.html', top=403, bottom='missing-username'), 400
+        if len(db.execute('SELECT * FROM users WHERE username=?', username)) > 0:
+            return render_template('apology.html', top=403, bottom='username-already-exists'), 400
+        
+        if not password or not confirmation:
+            return render_template('apology.html', top=403, bottom='missing-password'), 400
+        if not password == confirmation:
+            return render_template('apology.html', top=403, bottom='passwords-don\'t-match'), 400
+
+        db.execute(
+            'INSERT INTO users (username, hash) VALUES (?, ?)',
+            username,
+            generate_password_hash(password)
+        )
+
+        session['user_id'] = db.execute('SELECT id FROM users WHERE username=?', username)[0]['id']
+        return redirect('/')
+    else:
+        return render_template('register.html')
 
 
 db = SQL('sqlite:///illuminate.db')
