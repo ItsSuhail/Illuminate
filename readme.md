@@ -26,10 +26,14 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 3. `cd Illuminate` into the project directory
 
 4. Run the following:\
+   ```
+   python -m venv .venv
+   ```
+   
    On Windows:
    ```
    .venv\Scripts\activate
-   .venv\Scripts\pip install -r ../../requirements.txt
+   .venv\Scripts\python -m pip install -r ../../requirements.txt
    ```
    On Linux/MacOS:
    ```
@@ -40,7 +44,7 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 6. To start the server\
    On Windows:
    ```
-   .venv\Scripts\python app.py
+   .venv\Scripts\python -m app.py
    ```
    On Linux/MacOS:
    ```
