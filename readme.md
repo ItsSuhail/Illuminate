@@ -6,46 +6,46 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 
 ## Why choose OlympGeeks?
 
-- *Expert Guidance*: Learn from seasoned mathematicians and IMO veterans who provide invaluable insights and guidance every step of the way.
+- **Expert Guidance**: Learn from seasoned mathematicians and IMO veterans who provide invaluable insights and guidance every step of the way.
 
-- *Comprehensive Curriculum:* Dive deep into the world of mathematics with our meticulously structured courses covering all aspects of IMO preparation.
+- **Comprehensive Curriculum:** Dive deep into the world of mathematics with our meticulously structured courses covering all aspects of IMO preparation.
 
-- *Interactive Learning:* Engage in dynamic discussions, problem-solving sessions, and interactive exercises that foster a deeper understanding of mathematical concepts.
+- **Interactive Learning:** Engage in dynamic discussions, problem-solving sessions, and interactive exercises that foster a deeper understanding of mathematical concepts.
 
-- *Personalized Support:* Benefit from personalized attention with small class sizes and individualized feedback to maximize your learning potential.
+- **Personalized Support:** Benefit from personalized attention with small class sizes and individualized feedback to maximize your learning potential.
 
-- *Proven Results:* Join a community of achievers who have successfully conquered the IMO and other prestigious mathematical competitions with OlympGeek's proven teaching methodologies.
+- **Proven Results:** Join a community of achievers who have successfully conquered the IMO and other prestigious mathematical competitions with OlympGeek's proven teaching methodologies.
 
 ## How to use project:
 1. Ensure python is installed. [Instructions](https://python.org/downloads)
 
 2. If git is installed, clone the repo. Else download it as zip and unzip:
-   
+   ```
    git clone https://github.com/ItsSuhail/Illuminate.git
-   
-3. cd Illuminate into the project directory
+   ```
+3. `cd Illuminate` into the project directory
 
 4. Run the following:\
    On Windows:
-   
+   ```
    .venv\Scripts\activate
    .venv\Scripts\pip install -r ../../requirements.txt
-   
+   ```
    On Linux/MacOS:
-   
+   ```
    chmod +x .venv/bin/activate; .venv/bin/activate
    .venv/bin/pip install -r ../../requirements.txt
-   
+   ```
 
 6. To start the server\
    On Windows:
-   
+   ```
    .venv\Scripts\python app.py
-   
+   ```
    On Linux/MacOS:
-   
+   ```
    .venv/bin/python app.py
-   
+   ```
 
 ## Technologies used
 * Backend -> [Flask](https://flask.palletsprojects.com/en/3.0.x/)
