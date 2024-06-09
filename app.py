@@ -101,6 +101,14 @@ def logout():
     # Redirect user to login form
     return redirect('/')
 
+@app.route('/explore')
+def explore():
+    '''Explore all courses'''
+
+    courses = db.execute('SELECT * FROM courses')
+    print(courses)
+    return render_template('explore.html', courses=courses)
+
 
 db = SQL('sqlite:///illuminate.db')
 
