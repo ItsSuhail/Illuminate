@@ -25,7 +25,7 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
    ```
 3. `cd Illuminate` into the project directory
 
-4. Run the following:\
+4. Run the following:
    ```
    python -m venv env
    ```
@@ -50,6 +50,8 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
    ```
    env/bin/python app.py
    ```
+
+7. Visit `http://127.0.0.1:8080`
 
 ## Technologies used
 * Backend -> [Flask](https://flask.palletsprojects.com/en/3.0.x/)
