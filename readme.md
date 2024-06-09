@@ -44,7 +44,7 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 6. To start the server\
    On Windows:
    ```
-   env\Scripts\python -m app.py
+   env\Scripts\python app.py
    ```
    On Linux/MacOS:
    ```
