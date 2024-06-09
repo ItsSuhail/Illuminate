@@ -106,7 +106,6 @@ def explore():
     '''Explore all courses'''
 
     courses = db.execute('SELECT * FROM courses')
-    print(courses)
     return render_template('explore.html', courses=courses)
 
 
