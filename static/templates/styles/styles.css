@@ -1,3 +1,12 @@
 .container{
     text-align: center;
 }
+.head{
+    color: white;
+}
+#body{
+    background-color: #111119;
+}
+.sep{
+    background-color: whitesmoke;
+}
