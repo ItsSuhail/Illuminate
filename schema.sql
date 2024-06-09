@@ -1,1 +1,2 @@
 CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
+CREATE TABLE courses (id INTEGER, name TEXT NOT NULL, description MEDIUMTEXT NOT NULL, image TEXT, PRIMARY KEY(id));
