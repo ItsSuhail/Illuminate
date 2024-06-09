@@ -29,58 +29,19 @@
             setTimeout(typeWriter, speed);
           }
           else{
-            document.getElementById("typewriter").innerHTML = txt.substring(0, 2*txt.length - i) 
-            i++;
-            if(i>2*txt.length){
-              i = 0
+            if(i>2*txt.length-1){
               document.getElementById("typewriter").innerHTML = "‎"
+              i = 0
               await new Promise(r => setTimeout(r, 1000));
+            }
+            else{
+              document.getElementById("typewriter").innerHTML = txt.substring(0, 2*txt.length - i)
+              i++
             }
             setTimeout(typeWriter, speed);
           }
         }
         typeWriter();
-
-        // Canvas effect
-        const canvas = document.getElementById('sine-wave');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const wave = {
-            amplitude: 100,
-            frequency: 0.02,
-            phase: 0,
-            speed: 0.1,
-            yOffset: canvas.height / 2,
-            xOffset: 0,
-            lineWidth: 2,
-            color: 'blue'
-        };
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            ctx.beginPath();
-            ctx.moveTo(0, wave.yOffset);
-
-            for (let i = 0; i < canvas.width; i++) {
-                const y = wave.yOffset + wave.amplitude * Math.sin(wave.frequency * i + wave.phase);
-                ctx.lineTo(i, y);
-            }
-
-            ctx.strokeStyle = wave.color;
-            ctx.lineWidth = wave.lineWidth;
-            ctx.stroke();
-
-            wave.phase += wave.speed;
-
-            requestAnimationFrame(draw);
-        }
-
-        draw();
-
       </script>
     </body>
     
