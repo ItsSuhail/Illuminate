@@ -6,6 +6,7 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% if session.user_id %}
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -17,6 +18,7 @@
             <a class="nav-link" href="#">Become a tutor!</a>
         </li>
       </ul>
+      {% else %}
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="/login">Log In</a>
@@ -25,5 +27,6 @@
           <a class="nav-link" href="/register">Register</a>
         </li>
       </ul>
+      {% endif %}
     </div>
   </nav>
