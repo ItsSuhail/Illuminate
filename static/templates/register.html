@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<form action='/register' method='post'>
+<br />
+<form action='/register' method='post' style="padding-left: 20em; padding-right: 20em;">
     <div class='form-group'>        
-        <input class='form-control' autocomplete='off' autofocus name='username' placeholder='Username'>
+        <input class='bg-dark form-control' autocomplete='off' autofocus name='username' placeholder='Username'>
     </div>
     <div class='form-group'>
-        <input type='password' class='form-control' autocomplete='off' autofocus name='password' placeholder='Password'>
+        <input type='password' class='bg-dark form-control' autocomplete='off' autofocus name='password' placeholder='Password'>
     </div>
     <div class='form-group'>
-        <input type='password' class='form-control' autocomplete='off' autofocus name='confirmation' placeholder='Password (again)'>
+        <input type='password' class='bg-dark form-control' autocomplete='off' autofocus name='confirmation' placeholder='Password (again)'>
     </div>
     <button class='btn btn-primary' type='submit'>Register</button>
 </form>
