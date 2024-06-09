@@ -14,7 +14,7 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 
 - **Personalized Support:** Benefit from personalized attention with small class sizes and individualized feedback to maximize your learning potential.
 
-- **Proven Results:** Join a community of achievers who have successfully conquered the IMO and other prestigious mathematical competitions with OlympGeek's proven teaching methodologies.
+- **Proven Results:** Join a community of achievers who have successfully conquered the IMO and other prestigious mathematical competitions with OlympGeeks' proven teaching methodologies.
 
 ## How to use project:
 1. Ensure python is installed. [Instructions](https://python.org/downloads)
@@ -49,6 +49,6 @@ Unlock the secrets of mathematical excellence with our expertly crafted curricul
 
 ## Technologies used
 * Backend -> [Flask](https://flask.palletsprojects.com/en/3.0.x/)
-* Frontend -> Vanilla JS
+* Frontend -> [Vanilla JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * Database -> [Sqlite3](https://sqlite.org/)
 * UI Library -> [Bootstrap](https://getbootstrap.com/)
