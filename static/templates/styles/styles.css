@@ -6,7 +6,15 @@
 }
 #body{
     background-color: #111119;
+    margin-bottom: 4em;
 }
 .sep{
     background-color: whitesmoke;
+}
+#course_div {
+    display: flex;
+    flex-direction: column;
+}
+.points > li {
+    margin-bottom: 1em;
 }
