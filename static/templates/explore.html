@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 
 {% block main%}
-<ul>
-  {% for course in courses %}
-    <li>{{ course['name'] }}</li>
-  {% endfor %}
-</ul>
+{% for course in courses %}
+<div id="course_div">
+  <div class="card">
+    <img src="{{ course['image'] }}" class="card-img-top" alt="course image">
+    <div class="card-body">
+      <h5 class="card-title">{{ course['title'] }}</h5>
+      <p class="card-text">{{ course['description'] }}</p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+</div>
+{% endfor %}
 {% endblock %}
